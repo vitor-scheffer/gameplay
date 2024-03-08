@@ -2,7 +2,7 @@ import { View, Image, Text } from "react-native";
 
 import { styles } from "./styles";
 import IllustrationImg from "../../assets/illustration.png";
-import { Background } from "../../components/Background";
+import { Background, ButtonIcon } from "../../components";
 
 export function SignIn() {
   return (
@@ -22,6 +22,7 @@ export function SignIn() {
             Crie grupos para jogar seus games {`\n`}
             favoritos com seus amigos
           </Text>
+          <ButtonIcon title="Entrar com Discord" activeOpacity={0.8}/>
         </View>
       </View>
     </Background>
