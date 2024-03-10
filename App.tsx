@@ -1,13 +1,12 @@
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import { useFonts } from "@expo-google-fonts/inter";
-import { SignIn, Home } from "./src/screens";
 import AppLoading from "expo-app-loading";
 import {
   Rajdhani_500Medium,
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
 import { StatusBar } from "react-native";
-import { Background } from "./src/components";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,13 +21,13 @@ export default function App() {
   }
 
   return (
-    <Background>
+    <>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <Home />
-    </Background>
+      <Routes />
+    </>
   );
 }
