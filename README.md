@@ -1,5 +1,5 @@
-<div align="center">
-  🛠️ Em construção 🛠️
+<div align="center" flexDirection="column">
+  <h1>🛠️ Em construção 🛠️</h1>
   <img style="width: 24" src="https://github.com/vitor-scheffer/gameplay/assets/103120313/d09c956e-740d-466f-b543-c0280978d5e3" />
 </div>
 <h1 align="center">GamePlay</h1>
