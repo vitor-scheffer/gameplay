@@ -10,5 +10,9 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 26,
+    marginBottom: 40,
+  },
+  content: {
+    marginTop: 42,
   },
 });
