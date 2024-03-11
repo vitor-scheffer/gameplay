@@ -91,12 +91,16 @@ export function Home() {
     navigation.navigate("AppointmentDetails");
   };
 
+  const didTapBtnCreate = () => {
+    navigation.navigate("AppointmentCreate");
+  };
+
   return (
     <Background>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <Profile />
-          <ButtonAdd />
+          <ButtonAdd onPress={didTapBtnCreate} />
         </View>
         <View>
           <CategorySelect

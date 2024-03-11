@@ -33,6 +33,24 @@ export function AppointmentDetails() {
       avatar_url: "https://github.com/vitor-scheffer.png",
       status: "online",
     },
+    {
+      id: 3,
+      username: "Vitor",
+      avatar_url: "https://github.com/vitor-scheffer.png",
+      status: "online",
+    },
+    {
+      id: 4,
+      username: "Vitor",
+      avatar_url: "https://github.com/vitor-scheffer.png",
+      status: "online",
+    },
+    {
+      id: 5,
+      username: "Vitor",
+      avatar_url: "https://github.com/vitor-scheffer.png",
+      status: "online",
+    },
   ];
   return (
     <Background>
