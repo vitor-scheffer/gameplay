@@ -111,7 +111,7 @@ export function Home() {
               renderItem={({ item }) => (
                 <Appointment data={item} onPress={didTapAppointmentDetails} />
               )}
-              ItemSeparatorComponent={() => <ListDivider />}
+              ItemSeparatorComponent={ListDivider}
               showsVerticalScrollIndicator={false}
               style={styles.matches}
             />

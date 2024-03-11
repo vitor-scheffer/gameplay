@@ -1,10 +1,23 @@
-import { FlatList, ImageBackground, Text, View } from "react-native";
-import { Background, Header, ListHeader } from "../../components";
+import {
+  FlatList,
+  ImageBackground,
+  Text,
+  View,
+  SafeAreaView,
+} from "react-native";
+import {
+  Background,
+  ButtonIcon,
+  Header,
+  ListHeader,
+  Member,
+} from "../../components";
 import { BorderlessButton } from "react-native-gesture-handler";
 import { Fontisto } from "@expo/vector-icons";
 import { theme } from "../../global/styles/theme";
 import BannerImg from "../../assets/banner.png";
 import { styles } from "./styles";
+import { ListDivider } from "../../components/ListDivider";
 
 export function AppointmentDetails() {
   const members = [
@@ -44,8 +57,15 @@ export function AppointmentDetails() {
       <FlatList
         data={members}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Text>{item.username}</Text>}
+        renderItem={({ item }) => <Member data={item} />}
+        ItemSeparatorComponent={ListDivider}
+        style={styles.members}
       />
+      <SafeAreaView>
+        <View style={styles.footer}>
+          <ButtonIcon title="Entrar na Partida" />
+        </View>
+      </SafeAreaView>
     </Background>
   );
 }

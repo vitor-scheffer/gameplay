@@ -7,3 +7,4 @@ export * from "./CategorySelect";
 export * from "./ListHeader";
 export * from "./Appointment";
 export * from "./Header";
+export * from "./Member";
