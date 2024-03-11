@@ -2,21 +2,24 @@ import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
-  container: {
+  banner: {
     width: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 24,
+    height: 234,
+    marginBottom: 24
+  },
+  bannerContent: {
+    flex: 1,
+    justifyContent: "flex-end",
+    padding: 24,
   },
   title: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
-    fontSize: 18,
+    fontSize: 28,
   },
   subtitle: {
     fontFamily: theme.fonts.text400,
-    color: theme.colors.highlight,
+    color: theme.colors.heading,
     fontSize: 13,
-  }
+  },
 });

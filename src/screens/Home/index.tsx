@@ -10,8 +10,10 @@ import {
 } from "../../components";
 import { useState } from "react";
 import { ListDivider } from "../../components/ListDivider";
+import { useAppNavigation } from "../../utils/useAppNavigation";
 
 export function Home() {
+  const navigation = useAppNavigation();
   const [category, setCategory] = useState("");
   const appointments = [
     {
@@ -40,10 +42,53 @@ export function Home() {
       description:
         "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
     },
+    {
+      id: 3,
+      guild: {
+        id: 1,
+        name: "Lendários",
+        icon: null,
+        owner: true,
+      },
+      category: "1",
+      date: "22/06 às 20:40h",
+      description:
+        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
+    },
+    {
+      id: 4,
+      guild: {
+        id: 1,
+        name: "Lendários",
+        icon: null,
+        owner: true,
+      },
+      category: "1",
+      date: "22/06 às 20:40h",
+      description:
+        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
+    },
+    {
+      id: 5,
+      guild: {
+        id: 1,
+        name: "Lendários",
+        icon: null,
+        owner: true,
+      },
+      category: "1",
+      date: "22/06 às 20:40h",
+      description:
+        "É hoje que vamos chegar ao challenger sem perder uma partida da md10",
+    },
   ];
 
   const handleCategorySelect = (categoryId: string) => {
     categoryId === category ? setCategory("") : setCategory(categoryId);
+  };
+
+  const didTapAppointmentDetails = () => {
+    navigation.navigate("AppointmentDetails");
   };
 
   return (
@@ -63,7 +108,9 @@ export function Home() {
             <FlatList
               data={appointments}
               keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <Appointment data={item} />}
+              renderItem={({ item }) => (
+                <Appointment data={item} onPress={didTapAppointmentDetails} />
+              )}
               ItemSeparatorComponent={() => <ListDivider />}
               showsVerticalScrollIndicator={false}
               style={styles.matches}
