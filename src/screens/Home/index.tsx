@@ -35,7 +35,7 @@ export function Home() {
         id: 1,
         name: "Lendários",
         icon: null,
-        owner: true,
+        owner: false,
       },
       category: "1",
       date: "22/06 às 20:40h",
@@ -111,7 +111,7 @@ export function Home() {
             <ListHeader title="Partidas agendadas" subtitle="Total: 6" />
             <FlatList
               data={appointments}
-              keyExtractor={(item) => item.id}
+              keyExtractor={(item) => String(item.id)}
               renderItem={({ item }) => (
                 <Appointment data={item} onPress={didTapAppointmentDetails} />
               )}

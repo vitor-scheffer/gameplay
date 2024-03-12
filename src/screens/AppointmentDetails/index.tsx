@@ -31,7 +31,7 @@ export function AppointmentDetails() {
       id: 2,
       username: "Vitor",
       avatar_url: "https://github.com/vitor-scheffer.png",
-      status: "online",
+      status: "offline",
     },
     {
       id: 3,
@@ -74,7 +74,7 @@ export function AppointmentDetails() {
       <ListHeader title="Jogadores" subtitle="Total: 3" />
       <FlatList
         data={members}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => <Member data={item} />}
         ItemSeparatorComponent={ListDivider}
         style={styles.members}
