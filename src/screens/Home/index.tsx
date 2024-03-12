@@ -97,29 +97,30 @@ export function Home() {
 
   return (
     <Background>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-          <Profile />
-          <ButtonAdd onPress={didTapBtnCreate} />
-        </View>
-        <View>
+      <SafeAreaView style={styles.safeContainer}>
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <Profile />
+            <ButtonAdd onPress={didTapBtnCreate} />
+          </View>
           <CategorySelect
             categorySelected={category}
             setCategory={handleCategorySelect}
           />
-          <View style={styles.content}>
+          <View style={styles.listHeader}>
             <ListHeader title="Partidas agendadas" subtitle="Total: 6" />
-            <FlatList
-              data={appointments}
-              keyExtractor={(item) => String(item.id)}
-              renderItem={({ item }) => (
-                <Appointment data={item} onPress={didTapAppointmentDetails} />
-              )}
-              ItemSeparatorComponent={ListDivider}
-              showsVerticalScrollIndicator={false}
-              style={styles.matches}
-            />
           </View>
+          <FlatList
+            data={appointments}
+            keyExtractor={(item) => String(item.id)}
+            renderItem={({ item }) => (
+              <Appointment data={item} onPress={didTapAppointmentDetails} />
+            )}
+            ItemSeparatorComponent={ListDivider}
+            showsVerticalScrollIndicator={false}
+            style={styles.matches}
+            contentContainerStyle={{ paddingBottom: 40 }}
+          />
         </View>
       </SafeAreaView>
     </Background>
