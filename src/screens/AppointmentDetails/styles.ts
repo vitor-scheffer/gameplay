@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   banner: {
     width: "100%",
     height: 234,
-    marginBottom: 24
+    marginBottom: 24,
   },
   bannerContent: {
     flex: 1,
@@ -26,9 +26,12 @@ export const styles = StyleSheet.create({
     marginLeft: 24,
     marginTop: 24,
   },
+  contentTitle: {
+    marginHorizontal: 24,
+  },
   footer: {
     paddingHorizontal: 24,
     paddingBottom: 6,
-    paddingTop: 20
-  }
+    paddingTop: 20,
+  },
 });

@@ -71,7 +71,9 @@ export function AppointmentDetails() {
         </View>
       </ImageBackground>
 
-      <ListHeader title="Jogadores" subtitle="Total: 3" />
+      <View style={styles.contentTitle}>
+        <ListHeader title="Jogadores" subtitle="Total: 3" />
+      </View>
       <FlatList
         data={members}
         keyExtractor={(item) => String(item.id)}

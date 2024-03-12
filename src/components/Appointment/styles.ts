@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   content: {
     flex: 1,
     justifyContent: "space-between",
+    marginLeft: 24,
   },
   footer: {
     width: "100%",
@@ -19,7 +20,6 @@ export const styles = StyleSheet.create({
   dateInfo: {
     flexDirection: "row",
     alignItems: "center",
-    marginLeft: 24,
   },
   playersInfo: {
     flexDirection: "row",
