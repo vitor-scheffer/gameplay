@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Platform } from "react-native";
 
 export const styles = StyleSheet.create({
   safeContainer: {
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 26,
+    marginTop: Platform.OS === "android" ? 50 : 26,
     marginBottom: 40,
   },
   matches: {

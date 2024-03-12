@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
     width: "100%",
-    paddingTop: 14,
+    paddingTop: Platform.OS === "android" ? 40 : 14,
     paddingBottom: 16,
     paddingHorizontal: 24,
     flexDirection: "row",
