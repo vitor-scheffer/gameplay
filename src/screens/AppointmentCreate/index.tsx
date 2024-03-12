@@ -50,7 +50,7 @@ export function AppointmentCreate() {
     >
       <Background>
         <Header title="Agendar partida" />
-        <ScrollView style={{ backgroundColor: secondary100 }}>
+        <ScrollView>
           <Text
             style={[
               styles.label,

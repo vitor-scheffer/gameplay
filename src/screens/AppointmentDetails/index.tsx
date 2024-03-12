@@ -80,10 +80,11 @@ export function AppointmentDetails() {
         renderItem={({ item }) => <Member data={item} />}
         ItemSeparatorComponent={ListDivider}
         style={styles.members}
+        showsVerticalScrollIndicator={false}
       />
       <SafeAreaView>
         <View style={styles.footer}>
-          <ButtonIcon title="Entrar na Partida" />
+          <ButtonIcon title="Entrar no servidor do Discord" />
         </View>
       </SafeAreaView>
     </Background>

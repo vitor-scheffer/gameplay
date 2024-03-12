@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
   playersInfo: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 6,
   },
   date: {
     fontFamily: theme.fonts.title500,
@@ -34,7 +35,5 @@ export const styles = StyleSheet.create({
   players: {
     fontFamily: theme.fonts.title500,
     fontSize: 13,
-    marginLeft: 7,
-    marginRight: 24,
   },
 });
