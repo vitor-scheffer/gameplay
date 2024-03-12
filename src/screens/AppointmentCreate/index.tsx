@@ -71,19 +71,17 @@ export function AppointmentCreate() {
                   style={styles.image}
                   colors={[secondary60, secondary40]}
                 >
-                  {
-                    guildSelected.icon 
-                    ? (<GuildIcon />) 
-                    : (<View style={styles.image} />)
-                  }
+                  {guildSelected.icon ? (
+                    <GuildIcon />
+                  ) : (
+                    <View style={styles.image} />
+                  )}
                 </LinearGradient>
                 <View style={styles.selectBody}>
                   <Text style={styles.label}>
-                    {
-                      guildSelected.name
+                    {guildSelected.name
                       ? guildSelected.name
-                      : "Selecione um servidor"
-                    }
+                      : "Selecione um servidor"}
                   </Text>
                 </View>
                 <Feather name="chevron-right" size={18} color={heading} />
@@ -118,7 +116,10 @@ export function AppointmentCreate() {
           </View>
         </ScrollView>
       </Background>
-      <ModalView visible={openGuildsModal}>
+      <ModalView
+        visible={openGuildsModal}
+        didSwipeDown={() => setOpenGuildsModal(false)}
+      >
         <Guilds didTapBtnGuild={(guild) => didTapBtnGuild(guild)} />
       </ModalView>
     </KeyboardAvoidingView>
