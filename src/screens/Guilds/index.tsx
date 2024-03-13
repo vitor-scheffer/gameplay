@@ -34,6 +34,7 @@ export function Guilds({ didTapBtnGuild }: Props) {
         ItemSeparatorComponent={ListDivider}
         showsVerticalScrollIndicator={false}
         style={styles.guilds}
+        contentContainerStyle={{ paddingBottom: 50 }}
       />
     </View>
   );

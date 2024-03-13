@@ -4,18 +4,18 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 100,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    overflow: "hidden"
+    overflow: "hidden",
   },
   overlay: {
-    flex: 1,
+    height: 200,
     backgroundColor: theme.colors.overlay,
+    marginBottom: -20,
   },
   bar: {
     width: 39,
-    height: 2,
+    height: 5,
     borderRadius: 2,
     backgroundColor: theme.colors.secondary30,
     alignSelf: "center",
