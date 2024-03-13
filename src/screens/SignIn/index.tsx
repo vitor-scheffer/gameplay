@@ -3,9 +3,11 @@ import { styles } from "./styles";
 import IllustrationImg from "../../assets/illustration.png";
 import { Background, ButtonIcon } from "../../components";
 import { useAppNavigation } from "../../utils/useAppNavigation";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
   const navigation = useAppNavigation();
+  const { user } = useAuth();
 
   const didTapBtnSignIn = () => {
     navigation.navigate("Home");
@@ -28,10 +30,7 @@ export function SignIn() {
             Crie grupos para jogar seus games {"\n"}
             favoritos com seus amigos
           </Text>
-          <ButtonIcon
-            title="Entrar com Discord"
-            onPress={didTapBtnSignIn}
-          />
+          <ButtonIcon title="Entrar com Discord" onPress={didTapBtnSignIn} />
         </View>
       </View>
     </Background>

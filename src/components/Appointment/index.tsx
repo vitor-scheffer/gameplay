@@ -7,13 +7,7 @@ import PlayerSvg from "../../assets/player.svg";
 import CalendarSvg from "../../assets/calendar.svg";
 import { theme } from "../../global/styles/theme";
 import { ListHeader } from "../ListHeader";
-
-export type GuildProps = {
-  id: number;
-  name: string;
-  icon: string | null;
-  owner: boolean;
-};
+import { GuildProps } from "../Guild";
 
 export type AppointmentProps = {
   id: number;
